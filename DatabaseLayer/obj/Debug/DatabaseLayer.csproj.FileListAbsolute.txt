@@ -1,0 +1,35 @@
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\EntityFramework.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\EntityFramework.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CopyComplete
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\EntityFramework.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\EntityFramework.xml
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.csprojAssemblyReference.cache
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CopyComplete
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\obj\Debug\DatabaseLayer.csprojAssemblyReference.cache
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\EntityFramework.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\EntityFramework.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CopyComplete

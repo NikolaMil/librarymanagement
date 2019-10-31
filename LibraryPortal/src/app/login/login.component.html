@@ -1,0 +1,21 @@
+﻿<app-menu></app-menu>
+
+<form name="form" (ngSubmit)="f.form.valid && userLogin()" #f="ngForm" novalidate>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+        <label for="email">Email</label>
+        <input type="text" class="form-control mat-elevation-z1" name="email" [(ngModel)]="registerForm.email" #email="ngModel" required />
+        <div *ngIf="f.submitted && email.hasError('required')" class="alert alert-danger">Email is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <label for="password">Password</label>
+        <input type="password" class="form-control mat-elevation-z1" name="password" [(ngModel)]="registerForm.password" #password="ngModel" required  /> 
+        <div *ngIf="f.submitted && password.hasError('required')" class="alert alert-danger">Password is required</div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" mat-raised-button color="primary">Submit</button>
+    </div>
+</form>
+
+<div *ngIf="message" class="alert">
+   {{message}}
+</div>

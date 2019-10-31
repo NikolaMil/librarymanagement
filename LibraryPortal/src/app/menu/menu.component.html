@@ -1,0 +1,48 @@
+﻿<nav *ngIf="!user" class='navbar navbar-expand-md navbar-dark bg-dark mat-elevation-z2'>
+    <div>
+        <ul class='navbar-nav'>
+            <li class="nav-item" [class.active] = "router.isActive('/register')">
+                <a class="nav-link" [routerLink]="['/register']" style="cursor: pointer">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav *ngIf="user && member" class='navbar navbar-expand-md navbar-dark bg-dark mat-elevation-z2'>
+    <div>
+        <ul class='navbar-nav'>
+            <li class="nav-item" [class.active] = "router.isActive('/home')">
+                <a class="nav-link" [routerLink]="['/home']" style="cursor: pointer">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="logout()" style="cursor: pointer">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav *ngIf="user && !member" class='navbar navbar-expand-md navbar-dark bg-dark mat-elevation-z2'>
+    <div>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <ul class='navbar-nav'>
+                <li class="nav-item" [class.active] = "router.isActive('/home')">
+                    <a class="nav-link" [routerLink]="['/home']" style="cursor: pointer">Home</a>
+                </li>
+                <li class="nav-item" [class.active] = "router.isActive('/search-books')">
+                    <a class="nav-link" [routerLink]="['/search-books']" style="cursor: pointer">Search Books</a>
+                </li>
+                <li class="nav-item" [class.active] = "router.isActive('/add-book')">
+                    <a class="nav-link" [routerLink]="['/add-book']" style="cursor: pointer">Add Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logout()" style="cursor: pointer">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br />

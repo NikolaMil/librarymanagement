@@ -1,0 +1,277 @@
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\LibraryApi.dll.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\LibraryApi.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\LibraryApi.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csc.exe
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csc.exe.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csc.rsp
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csi.exe
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csi.exe.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\csi.rsp
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.AppContext.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Console.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Claims.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\vbc.exe
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\vbc.exe.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\vbc.rsp
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Antlr3.Runtime.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\EntityFramework.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Newtonsoft.Json.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Helpers.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Http.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Mvc.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Optimization.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Razor.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\WebGrease.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\EntityFramework.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Newtonsoft.Json.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Helpers.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Http.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Mvc.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Optimization.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.Razor.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Antlr3.Runtime.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CopyComplete
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\obj\Debug\LibraryApi.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\obj\Debug\LibraryApi.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\DatabaseLayer.dll
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\DatabaseLayer.pdb
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\bin\DatabaseLayer.dll.config
+C:\Users\ana.todorovska\Desktop\Project\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csprojAssemblyReference.cache
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\LibraryApi.dll.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\LibraryApi.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\LibraryApi.pdb
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csc.exe
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csc.exe.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csc.rsp
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csi.exe
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csi.exe.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\csi.rsp
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.AppContext.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Console.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.IO.Compression.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.IO.Pipes.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.AccessControl.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Claims.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.ValueTuple.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XPath.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\vbc.exe
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\vbc.exe.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\vbc.rsp
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Antlr3.Runtime.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\DatabaseLayer.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\EntityFramework.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\EntityFramework.SqlServer.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Newtonsoft.Json.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Swashbuckle.Core.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Net.Http.Formatting.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Cors.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Helpers.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.Cors.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.WebHost.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Mvc.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Optimization.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Razor.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.Deployment.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.Razor.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\WebActivatorEx.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\WebGrease.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\DatabaseLayer.pdb
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\DatabaseLayer.dll.config
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\EntityFramework.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\EntityFramework.SqlServer.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.Cors.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Newtonsoft.Json.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Net.Http.Formatting.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Helpers.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Http.WebHost.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Mvc.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Optimization.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.Razor.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.Deployment.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\System.Web.WebPages.Razor.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Antlr3.Runtime.pdb
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csprojAssemblyReference.cache
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CoreCompileInputs.cache
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CopyComplete
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\obj\Debug\LibraryApi.dll
+D:\Library Management Project\Internship2019\trunk\LibraryWebAPI\obj\Debug\LibraryApi.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\LibraryApi.dll.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\LibraryApi.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\LibraryApi.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csc.exe
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csc.exe.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csc.rsp
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csi.exe
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csi.exe.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\csi.rsp
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.AppContext.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Console.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Claims.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\vbc.exe
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\vbc.exe.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\vbc.rsp
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Antlr3.Runtime.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\DatabaseLayer.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\EntityFramework.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Newtonsoft.Json.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Swashbuckle.Core.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Cors.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Helpers.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.Cors.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Mvc.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Optimization.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Razor.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\WebActivatorEx.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\WebGrease.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\DatabaseLayer.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\DatabaseLayer.dll.config
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\EntityFramework.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.Cors.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Newtonsoft.Json.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Helpers.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Mvc.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Optimization.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.Razor.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Antlr3.Runtime.pdb
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\obj\Debug\LibraryWebAPI.csprojAssemblyReference.cache
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\obj\Debug\LibraryWebAPI.csproj.CopyComplete
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\obj\Debug\LibraryApi.dll
+C:\Users\nikola.milenkovski\Desktop\Library Management Project\LibraryWebAPI\obj\Debug\LibraryApi.pdb

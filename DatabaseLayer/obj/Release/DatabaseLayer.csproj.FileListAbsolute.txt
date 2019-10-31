@@ -1,0 +1,12 @@
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\DatabaseLayer.dll.config
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\DatabaseLayer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\DatabaseLayer.pdb
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\EntityFramework.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\EntityFramework.xml
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Release\DatabaseLayer.csprojAssemblyReference.cache
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Release\DatabaseLayer.csproj.CoreCompileInputs.cache
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Release\DatabaseLayer.csproj.CopyComplete
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Release\DatabaseLayer.dll
+D:\Library Management Project\Internship2019\trunk\DatabaseLayer\obj\Release\DatabaseLayer.pdb

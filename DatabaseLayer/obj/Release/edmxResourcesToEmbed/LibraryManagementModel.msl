@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibraryManagementModelStoreContainer" CdmEntityContainer="LibraryManagementEntities">
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="publish_year" ColumnName="publish_year" />
+          <ScalarProperty Name="number_available" ColumnName="number_available" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="summary" ColumnName="summary" />
+          <ScalarProperty Name="category_fk" ColumnName="category_fk" />
+          <ScalarProperty Name="language_fk" ColumnName="language_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category1" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="language1" ColumnName="language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="message_code" ColumnName="message_code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="message1" ColumnName="message" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_reserved_from" ColumnName="date_reserved_from" />
+          <ScalarProperty Name="date_reserved_to" ColumnName="date_reserved_to" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="date_confirmed" ColumnName="date_confirmed" />
+          <ScalarProperty Name="date_returned" ColumnName="date_returned" />
+          <ScalarProperty Name="user_fk" ColumnName="user_fk" />
+          <ScalarProperty Name="book_fk" ColumnName="book_fk" />
+          <ScalarProperty Name="confirmed_by" ColumnName="confirmed_by" />
+          <ScalarProperty Name="returned_to" ColumnName="returned_to" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="LibraryManagementModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LibraryManagementModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="post_code" ColumnName="post_code" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="membership_id" ColumnName="membership_id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="interested_in" ColumnName="interested_in" />
+          <ScalarProperty Name="role_fk" ColumnName="role_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_book_save" FunctionName="LibraryManagementModel.Store.sp_book_save">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LibraryManagementModel.sp_book_save_Result">
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_user_login" FunctionName="LibraryManagementModel.Store.sp_user_login">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LibraryManagementModel.sp_user_login_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="post_code" ColumnName="post_code" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="membership_id" ColumnName="membership_id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="interested_in" ColumnName="interested_in" />
+          <ScalarProperty Name="role_fk" ColumnName="role_fk" />
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_user_save" FunctionName="LibraryManagementModel.Store.sp_user_save">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LibraryManagementModel.sp_user_save_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="post_code" ColumnName="post_code" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="membership_id" ColumnName="membership_id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="interested_in" ColumnName="interested_in" />
+          <ScalarProperty Name="role_fk" ColumnName="role_fk" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_search_books" FunctionName="LibraryManagementModel.Store.sp_search_books">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LibraryManagementModel.sp_search_books_Result">
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="publish_year" ColumnName="publish_year" />
+          <ScalarProperty Name="number_available" ColumnName="number_available" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="summary" ColumnName="summary" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="language" ColumnName="language" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,112 @@
+﻿<form (ngSubmit)="onSubmit()">
+    <!--<input class="form-group form-control" type="hidden" id="userMembershipId" name="membershipIp" value="{{user.membershipId}}" [(ngModel)]="searchReservationForm.membershipId">
+    <input class="form-group form-control" type="hidden" id="userEmail" name="email" value="{{user.email}}" [(ngModel)]="searchReservationForm.email">-->
+    <div class="row">
+        <div class="col-sm-2 ">
+            <label>Reservation Code:</label>
+            <input type="text" class="form-control mat-elevation-z1" name="code" placeholder="Reservation Code" [(ngModel)]="searchReservationForm.code" #code="ngModel" />
+        </div>
+        <div class="col-sm-2 ">
+            <label>Date Reserved from:</label>
+            <input type="date" class="form-control mat-elevation-z1" name="dateReservedFrom" placeholder="Date Reserved from" [(ngModel)]="searchReservationForm.dateReservedFrom" #dateReservedFrom="ngModel" />
+        </div>
+        <div class="col-sm-2 ">
+            <label>Date Reserved to:</label>
+            <input type="date" class="form-control mat-elevation-z1" name="dateReservedTo" placeholder="Date Reserved to" [(ngModel)]="searchReservationForm.dateReservedTo" #dateReservedTo="ngModel" />
+        </div>
+        <div class="col-sm-2 ">
+            <label>Email:</label>
+            <input type="text" class="form-control mat-elevation-z1" name="email" placeholder="Email" [(ngModel)]="searchReservationForm.email" #email="ngModel" required />
+        </div>
+        <div class="col-sm-2 ">
+            <label>Membership Id:</label>
+            <input #membershipId="ngModel" class="form-control mat-elevation-z1" type="text" name="search" [(ngModel)]="searchReservationForm.membershipId" placeholder="Membership Id" />
+        </div>
+        <div class="col-sm-2 " style="text-align: center">
+            <input type="checkbox" class="form-check-input" name="isConfirmed" style="margin-top: 43px;" [(ngModel)]="searchReservationForm.isConfirmed" #isConfirmed="ngModel" />
+            <label class="form-check-label" style="margin-top: 35px;">Is Confirmed</label>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-4">
+            <button mat-raised-button color="primary" style="cursor: pointer">Search</button>
+            <button mat-raised-button class="ml-2" (click)="clearFilters()">Clear Search</button>    
+        </div>
+    </div>
+</form>
+    <br />
+
+<!--<table class="table">
+    <thead>
+        <tr>
+            <th>Reservation Code</th>
+            <th>Member Id</th>
+            <th>ISBN</th>
+            <th>Date Reservation From</th>
+            <th>Date Reservation To</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservation of reservations | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 10,
+                                                      currentPage: page,
+                                                      totalItems: totalRec }">
+            <td>{{reservation.code}}</td>
+            <td>{{reservation.userMembershipId}}</td>
+            <td>{{reservation.bookISBN}}</td>
+            <td>{{reservation.dateReservedFrom}}</td>
+            <td>{{reservation.dateReservedTo}}</td>
+            <td><button class="btn btn-primary">Confirmed</button></td>
+            <td><button class="btn btn-primary">Returned</button></td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls id="listing_pagination" directionLinks="true" (pageChange)="page = $event"></pagination-controls>-->
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="librarianConfirmedBy">
+            <th mat-header-cell *matHeaderCellDef> Librarian Confirmed by </th>
+            <td mat-cell>{{user.membershipId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef> Code </th>
+            <td mat-cell *matCellDef="let reservation">{{reservation.code}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="userMembershipId">
+            <th mat-header-cell *matHeaderCellDef> Member Id </th>
+            <td mat-cell *matCellDef="let reservation">{{reservation.userMembershipId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="bookISBN">
+            <th mat-header-cell *matHeaderCellDef> Book ISBN </th>
+            <td mat-cell *matCellDef="let reservation">{{reservation.bookISBN}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dateReservedFrom">
+            <th mat-header-cell *matHeaderCellDef> Date reserved from </th>
+            <td mat-cell *matCellDef="let reservation">{{reservation.dateReservedFrom | date:'d MMM y'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dateReservedTo">
+            <th mat-header-cell *matHeaderCellDef> Date reserved to </th>
+            <td mat-cell *matCellDef="let reservation">{{reservation.dateReservedTo | date:'d MMM y'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="confirmed">
+            <th mat-header-cell *matHeaderCellDef> Confirm reservation </th>
+            <td mat-cell *matCellDef="let row"><button mat-raised-button color="primary" style="cursor: pointer" (click)="onConfirm(row, user.membershipId)">Confirm</button></td>
+        </ng-container>
+
+        <ng-container matColumnDef="returned">
+            <th mat-header-cell *matHeaderCellDef> Return reservation </th>
+            <td mat-cell *matCellDef="let row"><button mat-raised-button color="default" style="cursor: pointer" (click)="onReturn(row, user.membershipId)">Return</button></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

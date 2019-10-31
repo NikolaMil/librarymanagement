@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isbn" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="publish_year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="number_available" Type="Int32" Nullable="false" />
+    <Property Name="publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="category_fk" Type="Int32" Nullable="false" />
+    <Property Name="language_fk" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Books_Categories" FromRole="Book" ToRole="Category" />
+    <NavigationProperty Name="Language" Relationship="Self.FK_Books_Languages" FromRole="Book" ToRole="Language" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_Books" FromRole="Book" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK_Books_Categories" FromRole="Category" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="language1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK_Books_Languages" FromRole="Language" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="message1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="message_code" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_reserved_from" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="date_reserved_to" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_confirmed" Type="DateTime" Precision="3" />
+    <Property Name="date_returned" Type="DateTime" Precision="3" />
+    <Property Name="user_fk" Type="Int32" Nullable="false" />
+    <Property Name="book_fk" Type="Int32" Nullable="false" />
+    <Property Name="confirmed_by" Type="Int32" />
+    <Property Name="returned_to" Type="Int32" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_Reservations_Books" FromRole="Reservation" ToRole="Book" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Reservations_Users" FromRole="Reservation" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="date_of_birth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="post_code" Type="Int32" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="membership_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subscription" Type="Boolean" Nullable="false" />
+    <Property Name="interested_in" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="role_fk" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_Users" FromRole="User" ToRole="Reservation" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Users_Roles" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK_Books_Categories">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="category_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Books_Languages">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="language_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Books">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="book_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Users">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="user_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="role_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibraryManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Languages" EntityType="Self.Language" />
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Books_Categories" Association="Self.FK_Books_Categories">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Books_Languages" Association="Self.FK_Books_Languages">
+      <End Role="Language" EntitySet="Languages" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Books" Association="Self.FK_Reservations_Books">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Users" Association="Self.FK_Reservations_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <FunctionImport Name="sp_book_save" ReturnType="Collection(LibraryManagementModel.sp_book_save_Result)">
+      <Parameter Name="isbn" Mode="In" Type="Int32" />
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="author" Mode="In" Type="String" />
+      <Parameter Name="publish_year" Mode="In" Type="String" />
+      <Parameter Name="number_available" Mode="In" Type="Int32" />
+      <Parameter Name="publisher" Mode="In" Type="String" />
+      <Parameter Name="image" Mode="In" Type="String" />
+      <Parameter Name="summary" Mode="In" Type="String" />
+      <Parameter Name="categoryName" Mode="In" Type="String" />
+      <Parameter Name="languageName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_user_login" ReturnType="Collection(LibraryManagementModel.sp_user_login_Result)">
+      <Parameter Name="input_email" Mode="In" Type="String" />
+      <Parameter Name="input_password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_user_save" ReturnType="Collection(LibraryManagementModel.sp_user_save_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="first_name" Mode="In" Type="String" />
+      <Parameter Name="last_name" Mode="In" Type="String" />
+      <Parameter Name="date_of_birth" Mode="In" Type="DateTime" />
+      <Parameter Name="gender" Mode="In" Type="String" />
+      <Parameter Name="phone_number" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="post_code" Mode="In" Type="Int32" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="country" Mode="In" Type="String" />
+      <Parameter Name="membership_id" Mode="In" Type="String" />
+      <Parameter Name="subscription" Mode="In" Type="Boolean" />
+      <Parameter Name="interested_in" Mode="In" Type="String" />
+      <Parameter Name="roleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_search_books" ReturnType="Collection(LibraryManagementModel.sp_search_books_Result)">
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="author" Mode="In" Type="String" />
+      <Parameter Name="publish_year" Mode="In" Type="String" />
+      <Parameter Name="categoryName" Mode="In" Type="String" />
+      <Parameter Name="languageName" Mode="In" Type="String" />
+      <Parameter Name="roleName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_book_save_Result">
+    <Property Type="String" Name="message" Nullable="false" />
+    <Property Type="String" Name="type" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_user_login_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="first_name" Nullable="false" />
+    <Property Type="String" Name="last_name" Nullable="false" />
+    <Property Type="DateTime" Name="date_of_birth" Nullable="false" />
+    <Property Type="String" Name="gender" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="phone_number" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="address" Nullable="false" />
+    <Property Type="Int32" Name="post_code" Nullable="false" />
+    <Property Type="String" Name="city" Nullable="false" />
+    <Property Type="String" Name="country" Nullable="false" />
+    <Property Type="String" Name="membership_id" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="subscription" Nullable="false" />
+    <Property Type="String" Name="interested_in" Nullable="true" />
+    <Property Type="Int32" Name="role_fk" Nullable="false" />
+    <Property Type="String" Name="role_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="message" Nullable="true" />
+    <Property Type="String" Name="type" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_user_save_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="first_name" Nullable="false" />
+    <Property Type="String" Name="last_name" Nullable="false" />
+    <Property Type="DateTime" Name="date_of_birth" Nullable="false" />
+    <Property Type="String" Name="gender" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="phone_number" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="address" Nullable="false" />
+    <Property Type="Int32" Name="post_code" Nullable="false" />
+    <Property Type="String" Name="city" Nullable="false" />
+    <Property Type="String" Name="country" Nullable="false" />
+    <Property Type="String" Name="membership_id" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="subscription" Nullable="false" />
+    <Property Type="String" Name="interested_in" Nullable="true" />
+    <Property Type="Int32" Name="role_fk" Nullable="false" />
+    <Property Type="String" Name="message" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="type" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_search_books_Result">
+    <Property Type="Int32" Name="isbn" Nullable="false" />
+    <Property Type="String" Name="title" Nullable="false" />
+    <Property Type="String" Name="author" Nullable="false" />
+    <Property Type="String" Name="publish_year" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="number_available" Nullable="false" />
+    <Property Type="String" Name="publisher" Nullable="false" />
+    <Property Type="String" Name="image" Nullable="true" />
+    <Property Type="String" Name="summary" Nullable="true" />
+    <Property Type="String" Name="category" Nullable="false" />
+    <Property Type="String" Name="language" Nullable="false" />
+  </ComplexType>
+</Schema>

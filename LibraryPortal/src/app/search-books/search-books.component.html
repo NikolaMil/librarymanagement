@@ -1,0 +1,238 @@
+﻿<app-menu *ngIf="user.roleName == 'Librarian'"></app-menu>
+<form autocomplete="off" #searchForm (ngSubmit)="onSubmit()">
+    <input autocomplete="off" name="hidden" type="text" style="display:none;">
+    <input class="form-group form-control" type="hidden" id="userRole" name="role" value="{{user.roleName}}" [(ngModel)]="searchBookForm.role">
+
+    <div class="form-group row">
+        <div class="col-sm-8">
+            <input [matAutocomplete]="auto" [formControl]="titleCtrl" step="3" class="form-control mat-elevation-z1" type="text" name="search" [(ngModel)]="searchBookForm.title" placeholder="Search Title" />
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let book of filteredTitles | async" [value]="book.title">{{book.title}}</mat-option>
+              </mat-autocomplete>
+        </div>
+        <div class="col-sm-4">
+            <button mat-raised-button color="primary">Search</button>
+            <button mat-raised-button class="ml-2" (click)="clearFilters()">Clear Search</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <button type="button" mat-raised-button (click)="showMyContainer=!showMyContainer">
+                <span class="glyphicon glyphicon-expand"></span> Expand Filters
+            </button>
+            <button mat-raised-button color="primary" *ngIf="user.roleName == 'Librarian'" type="button" class="ml-3" (click)="addBook()">Add Book</button>
+        </div>
+    </div>
+    <br />
+    <div class="row" id="filters" *ngIf="showMyContainer">
+        <br />
+        <div class="col-sm-2 form-group">
+            <label>Author:</label>
+            <input type="text" class="form-control mat-elevation-z1" name="author" placeholder="Author" [(ngModel)]="searchBookForm.author" #author="ngModel" />
+        </div>
+        <div class="col-sm-2 form-group" *ngIf="user.roleName == 'Librarian'">
+            <label>Publish Year:</label>
+            <input type="text" class="form-control mat-elevation-z1" name="publishYear" placeholder="Publish Year" [(ngModel)]="searchBookForm.publishYear" #publishYear="ngModel" />
+        </div>
+        <div class="col-sm-2 form-group">
+            <label>Category:</label>
+            <select name="category" class="form-control mat-elevation-z1" [(ngModel)]="searchBookForm.category" #category="ngModel">
+                <option> </option>
+                <option *ngFor="let category of categories" [value]="category.category">{{category.category}}</option>
+            </select>
+        </div>
+        <div class="col-sm-2 form-group">
+            <label>Language:</label>
+            <select name="language" class="form-control mat-elevation-z1" [(ngModel)]="searchBookForm.language" #language="ngModel">
+                <option> </option>
+                <option *ngFor="let language of languages" [value]="language.language">{{language.language}}</option>
+            </select>
+        </div>
+    </div>
+</form>
+<br />
+<!--<div class="table-responsive">
+<table *ngIf="user.roleName == 'Librarian'" class="table table-hover table-striped table-bordered text-center">
+    <thead class="thead-dark">
+    <tr>
+        <th>Info</th>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publish Year</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books | paginate: { id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalRec }">
+        <td *matCelldef="let row"><i class="material-icons" style="cursor: pointer" (click)="onInfo(row)">info</i></td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.publishYear}}</td>
+        <td><i class="material-icons" style="cursor: pointer">open_in_new</i></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div class="table-responsive">
+<table *ngIf="user.roleName == 'Member'" class="table table-hover table-striped table-bordered text-center">
+    <thead class="thead-dark">
+    <tr>
+        <th>Info</th>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books | paginate: { id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalRec }">
+        <td><i class="material-icons" style="cursor: pointer">info</i></td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td><button class="btn btn-success" style="cursor: pointer">Reserve</button></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<pagination-controls id="listing_pagination" directionLinks="true" (pageChange)="page = $event"></pagination-controls>-->
+<div class="mat-elevation-z8">
+    <table mat-table *ngIf="user.roleName == 'Librarian'" [dataSource]="dataSource">
+        <ng-container matColumnDef="info">
+            <th mat-header-cell *matHeaderCellDef> Info </th>
+            <td mat-cell *matCellDef="let row"><i class="material-icons" style="cursor: pointer" (click)="onInfo(row)">info</i></td>
+        </ng-container>
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let book">{{book.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="isbn">
+            <th mat-header-cell *matHeaderCellDef> ISBN </th>
+            <td mat-cell *matCellDef="let book">{{book.isbn}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let book">{{book.title}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef> Author </th>
+            <td mat-cell *matCellDef="let book">{{book.author}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let book">{{book.category}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="language">
+            <th mat-header-cell *matHeaderCellDef> Language </th>
+            <td mat-cell *matCellDef="let book">{{book.language}}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="publishYear">
+            <th mat-header-cell *matHeaderCellDef> Publish Year </th>
+            <td mat-cell *matCellDef="let book">{{book.publishYear}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="numberAvailable">
+            <th mat-header-cell *matHeaderCellDef> Number Available </th>
+            <td mat-cell *matCellDef="let book">{{book.numberAvailable}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="publisher">
+            <th mat-header-cell *matHeaderCellDef> Publisher </th>
+            <td mat-cell *matCellDef="let book">{{book.publisher}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let book">{{book.image}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="summary">
+            <th mat-header-cell *matHeaderCellDef> Book Summary </th>
+            <td mat-cell *matCellDef="let book">{{book.summary}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Edit </th>
+            <td mat-cell *matCellDef="let row"><i (click) = "onEdit(row)" class="material-icons" style="cursor: pointer">open_in_new</i></td>
+        </ng-container> 
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsLibrarian"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsLibrarian;"></tr>
+    </table>
+    
+    <table mat-table *ngIf="user.roleName == 'Member'" [dataSource]="dataSource">
+        <ng-container matColumnDef="info">
+            <th mat-header-cell *matHeaderCellDef> Info </th>
+            <td mat-cell *matCellDef="let row"><i class="material-icons" style="cursor: pointer" (click)="onInfo(row)">info</i></td>
+        </ng-container>
+
+        <ng-container matColumnDef="isbn">
+            <th mat-header-cell *matHeaderCellDef> ISBN </th>
+            <td mat-cell *matCellDef="let book">{{book.isbn}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let book">{{book.title}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef> Author </th>
+            <td mat-cell *matCellDef="let book">{{book.author}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let book">{{book.category}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="language">
+            <th mat-header-cell *matHeaderCellDef> Language </th>
+            <td mat-cell *matCellDef="let book">{{book.language}}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="publishYear">
+            <th mat-header-cell *matHeaderCellDef> Publish Year </th>
+            <td mat-cell *matCellDef="let book">{{book.publishYear}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="numberAvailable">
+            <th mat-header-cell *matHeaderCellDef> Number Available </th>
+            <td mat-cell *matCellDef="let book">{{book.numberAvailable}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="publisher">
+            <th mat-header-cell *matHeaderCellDef> Publisher </th>
+            <td mat-cell *matCellDef="let book">{{book.publisher}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let book">{{book.image}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="summary">
+            <th mat-header-cell *matHeaderCellDef> Book Summary </th>
+            <td mat-cell *matCellDef="let book">{{book.summary}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="reserve">
+            <th mat-header-cell *matHeaderCellDef> Reserve </th>
+            <td mat-cell *matCellDef="let row; let book"><button mat-raised-button color="primary" style="cursor: pointer" (click)="onReserve(row, user.membershipId, book.isbn)">Reserve</button></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsMember"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsMember;"></tr>
+    </table>
+
+    <mat-paginator [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

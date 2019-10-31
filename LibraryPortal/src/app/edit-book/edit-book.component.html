@@ -1,0 +1,68 @@
+<form [formGroup]="service.form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="400px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field [hidden]="true">
+                    <input matInput formControlName="id">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="isbn" readonly="readonly" matInput placeholder="ISBN">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="title" matInput placeholder="Title*">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="author" matInput placeholder="Author*">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select formControlName="category" placeholder="Category*">
+                        <mat-option> </mat-option>
+                        <ng-container *ngFor="let category of categories">
+                            <mat-option value="{{category.category}}">{{category.category}}</mat-option>
+                        </ng-container>
+                    </mat-select>
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select formControlName="language" placeholder="Language*">
+                        <mat-option> </mat-option>
+                        <ng-container *ngFor="let language of languages">
+                            <mat-option value="{{language.language}}">{{language.language}}</mat-option>
+                        </ng-container>
+                    </mat-select>
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field>
+                    <input formControlName="publishYear" matInput placeholder="Publish year*">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="numberAvailable" matInput placeholder="Number Available*">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="publisher" matInput placeholder="Publisher*">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="image" matInput placeholder="Image">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="summary" matInput placeholder="Book Summary">
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit">Submit</button>
+                    <button mat-raised-button color="default" type="button" (click)="onClose()">Close</button>
+                </div> 
+            </div>     
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+</form>

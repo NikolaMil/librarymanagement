@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isbn" Type="int" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="publish_year" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="number_available" Type="int" Nullable="false" />
+    <Property Name="publisher" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="summary" Type="nvarchar(max)" />
+    <Property Name="category_fk" Type="int" Nullable="false" />
+    <Property Name="language_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="language" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="message_code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_reserved_from" Type="datetime" Nullable="false" />
+    <Property Name="date_reserved_to" Type="datetime" Nullable="false" />
+    <Property Name="code" Type="varchar(max)" Nullable="false" />
+    <Property Name="date_confirmed" Type="datetime" />
+    <Property Name="date_returned" Type="datetime" />
+    <Property Name="user_fk" Type="int" Nullable="false" />
+    <Property Name="book_fk" Type="int" Nullable="false" />
+    <Property Name="confirmed_by" Type="int" />
+    <Property Name="returned_to" Type="int" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="first_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="last_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_of_birth" Type="date" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="post_code" Type="int" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="membership_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subscription" Type="bit" Nullable="false" />
+    <Property Name="interested_in" Type="nvarchar(max)" />
+    <Property Name="role_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Books_Categories">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="category_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Books_Languages">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="language_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Books">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="book_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Users">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="user_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="role_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_book_save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="isbn" Type="int" Mode="In" />
+    <Parameter Name="title" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="author" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="publish_year" Type="nvarchar" Mode="In" />
+    <Parameter Name="number_available" Type="int" Mode="In" />
+    <Parameter Name="publisher" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="image" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="summary" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="categoryName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="languageName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_search_books" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="title" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="author" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="publish_year" Type="nvarchar" Mode="In" />
+    <Parameter Name="categoryName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="languageName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="roleName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_user_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="input_email" Type="nvarchar" Mode="In" />
+    <Parameter Name="input_password" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_user_save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="first_name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="last_name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="date_of_birth" Type="date" Mode="In" />
+    <Parameter Name="gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone_number" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="post_code" Type="int" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="country" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="membership_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="subscription" Type="bit" Mode="In" />
+    <Parameter Name="interested_in" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="roleName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="LibraryManagementModelStoreContainer">
+    <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Books_Categories" Association="Self.FK_Books_Categories">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Books_Languages" Association="Self.FK_Books_Languages">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Books" Association="Self.FK_Reservations_Books">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Users" Association="Self.FK_Reservations_Users">
+      <End Role="User" EntitySet="User" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

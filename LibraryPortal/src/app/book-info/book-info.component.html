@@ -1,0 +1,46 @@
+<form [formGroup]="service.form">
+    <mat-grid-list cols="2" rowHeight="400px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field [hidden]="true">
+                    <input matInput formControlName="id">
+                </mat-form-field>
+                <mat-form-field *ngIf="user.roleName == 'Librarian'">
+                    <input formControlName="isbn" readonly="readonly" matInput placeholder="ISBN">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="title" readonly="readonly" matInput placeholder="Title">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="author" readonly="readonly" matInput placeholder="Author">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="category" readonly="readonly" matInput placeholder="Category">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="language" readonly="readonly" matInput placeholder="Language">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field>
+                    <input formControlName="publishYear" matInput readonly="readonly" placeholder="Publish year">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="numberAvailable" matInput readonly="readonly" placeholder="Number Available">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="publisher" matInput readonly="readonly" placeholder="Publisher">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="image" matInput readonly="readonly" placeholder="Image">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="summary" matInput readonly="readonly" placeholder="Book Summary">
+                </mat-form-field>
+            </div>     
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

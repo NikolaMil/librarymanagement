@@ -1,0 +1,4 @@
+﻿<app-menu></app-menu>
+<app-search-books *ngIf="user && member" [user]="user"></app-search-books>
+<app-search-reservations *ngIf="user && !member" [user]="user"></app-search-reservations>
+

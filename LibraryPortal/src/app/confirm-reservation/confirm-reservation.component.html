@@ -1,0 +1,29 @@
+<form [formGroup] = "service.confirmForm" (submit)="onSubmit()">
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <div>
+                    <mat-form-field [hidden]="true">
+                        <input matInput formControlName="id">
+                    </mat-form-field>
+                    <mat-form-field [hidden]="true">
+                        <input matInput formControlName="librarianConfirmedBy">
+                    </mat-form-field>
+                    <mat-form-field [hidden]="true">
+                        <input matInput formControlName="code">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [min]="minDate" [matDatepicker]="picker1" formControlName="dateConfirmed" placeholder="Enter date of confirming this reservation">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                    <div>
+                        <button class="ml-2" mat-raised-button color="primary" type="submit">Confirm</button>
+                    </div>
+                    <div>
+                        <button class="ml-2" mat-raised-button color="warn" type="button" (click)="onClose()">Close</button>
+                    </div>
+            </mat-grid-tile>
+    
+        </mat-grid-list>
+    </form>

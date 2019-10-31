@@ -1,0 +1,109 @@
+﻿<app-menu></app-menu>
+
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate *ngIf="!isRegistered">
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+        <label for="email">Email</label>
+        <input type="text" class="form-control mat-elevation-z1" name="email" [(ngModel)]="registerForm.email" #email="ngModel" required pattern="^[a-zA-Z][\w\.-]{2,28}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$" />
+        <div *ngIf="f.submitted && email.hasError('required')" class="text-danger">Email is required</div>
+        <div *ngIf="f.submitted && email.hasError('pattern')" class="text-danger">Invalid credentials, ex: examplename@example.example</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <label for="password">Password</label>
+        <input type="password" class="form-control mat-elevation-z1" name="password" [(ngModel)]="registerForm.password" #password="ngModel" required minlength="8" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[~!@#$%^&amp;*()+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*" />
+        <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+            <div *ngIf="f.submitted && password.hasError('required')" class="text-danger">Password is required</div>
+            <div *ngIf="f.submitted && password.hasError('minlength')" class="text-danger">Password must be at least eight characters</div>
+            <div *ngIf="f.submitted && password.hasError('pattern')" class="text-danger">Password must contain at least one digit, one uppercase, one lowercase and one special character.</div>
+        </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control mat-elevation-z1" name="firstName" [(ngModel)]="registerForm.firstName" #firstName="ngModel" required />
+        <div *ngIf="f.submitted && !firstName.valid" class="text-danger">First Name is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control mat-elevation-z1" name="lastName" [(ngModel)]="registerForm.lastName" #lastName="ngModel" required />
+        <div *ngIf="f.submitted && !lastName.valid" class="text-danger">Last Name is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !dateOfBirth.valid }">
+        <label for="dateOfBirth">Date Of Birth</label>
+        <input type="date" class="form-control mat-elevation-z1" name="dateOfBirth" [(ngModel)]="registerForm.dateOfBirth" #dateOfBirth="ngModel" required />
+        <div *ngIf="f.submitted && !dateOfBirth.valid" class="text-danger">Date Of Birth is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !gender.valid }">
+        <label for="gender">Gender</label>
+        <input type="text" class="form-control mat-elevation-z1" name="gender" [(ngModel)]="registerForm.gender" #gender="ngModel" required />
+        <div *ngIf="f.submitted && !gender.valid" class="text-danger">Gender is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !phoneNumber.valid }">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" class="form-control mat-elevation-z1" name="phoneNumber" [(ngModel)]="registerForm.phoneNumber" #phoneNumber="ngModel" required minlength="10" maxlength="16" pattern="^\+(?:[0-9]){9,15}$" />
+        <div *ngIf="f.submitted && !phoneNumber.valid" class="text-danger">Phone Number is required</div>
+        <div *ngIf="f.submitted && phoneNumber.hasError('minlength')" class="text-danger">Phone number should have at least nine digits</div>
+        <div *ngIf="f.submitted && phoneNumber.hasError('pattern')" class="text-danger">Invalid phone number format, phone number should start with a plus sign</div>
+    </div>                                                                                                                                    
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !address.valid }">
+        <label for="address">Address</label>
+        <input type="text" class="form-control mat-elevation-z1" name="address" [(ngModel)]="registerForm.address" #address="ngModel" required />
+        <div *ngIf="f.submitted && !address.valid" class="text-danger">Address is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !postCode.valid }">
+        <label for="postCode">Post Code</label>
+        <input type="number" class="form-control mat-elevation-z1" name="postCode" [(ngModel)]="registerForm.postCode" #postCode="ngModel" required min="1" />
+        <div *ngIf="f.submitted && postCode.hasError('required')" class="text-danger">Post Code is required</div>
+        <div *ngIf="f.submitted && postCode.hasError('min')" class="text-danger">Post Code must be positive number</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !city.valid }">
+        <label for="city">City</label>
+        <input type="text" class="form-control mat-elevation-z1" name="city" [(ngModel)]="registerForm.city" #city="ngModel" required />
+        <div *ngIf="f.submitted && !city.valid" class="text-danger">City is required</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !country.valid }">
+        <label for="country">Country</label>
+        <input type="text" class="form-control mat-elevation-z1" name="country" [(ngModel)]="registerForm.country" #country="ngModel" required />
+        <div *ngIf="f.submitted && !country.valid" class="text-danger">Country is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="subscription">Subscription</label>
+        <input type="checkbox" name="subscription" [(ngModel)]="registerForm.subscription" #subscription="ngModel" />
+    </div>
+
+    <div class="form-group">
+        <label for="interestedIn">Interested In</label>
+        <input type="text" class="form-control mat-elevation-z1" name="interestedIn" [(ngModel)]="registerForm.interestedIn" #interestedIn="ngModel" />
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !agreeToTheTermsOfUse.valid }">
+        <label for="agreeToTheTermsOfUse">Agree To The Terms Of Use</label>
+        <input type="checkbox" name="agreeToTheTermsOfUse" [(ngModel)]="registerForm.agreeToTheTermsOfUse" #agreeToTheTermsOfUse="ngModel" required />
+        <div *ngIf="f.submitted && !agreeToTheTermsOfUse.valid" class="text-danger">Agree To The Terms Of Use is required</div>
+    </div>
+
+    <div class="form-group">
+        <button [disabled]="loading" mat-raised-button color="primary">Sign Up</button>
+        <button [routerLink]="['/login']" mat-raised-button color="default" class="ml-2">Cancel</button>
+    </div>
+
+    <div *ngIf="!isRegistered" [hidden]="!loading">
+        <div>{{validationMessage}}</div>
+    </div>
+
+</form>
+
+<div *ngIf="isRegistered">
+    <div>{{validationMessage}}! Please Login!</div>
+    <div><a [routerLink]="['login']">Go To Login Page</a></div>
+</div>
